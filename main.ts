@@ -3,7 +3,13 @@ input.onButtonPressed(Button.A, function () {
     radio.sendString("smile")
 })
 radio.onReceivedString(function (receivedString) {
-    basic.showIcon(IconNames.Silly)
+    if (receivedString == "smile") {
+        basic.showIcon(IconNames.Silly)
+    } else if (receivedString == "sad") {
+        basic.showIcon(IconNames.Butterfly)
+    } else {
+    	
+    }
 })
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
